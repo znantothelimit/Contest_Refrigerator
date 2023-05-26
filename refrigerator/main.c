@@ -1,7 +1,6 @@
 ﻿#include "header.h"
 
 
-
 S_CATE small_array_meat[MAX_CATEGORY] = {
     {"Chicken", 1},
     {"Beef", 10},
@@ -41,26 +40,22 @@ CATE array_category[MAX_CATEGORY] = {
     {"DAIRY", small_array_dairy},
 };
 
-int count = 0;
-int buf = 0;
+
+int count = 0;  // 상품 수 카운트
+
 
 int main(void) {
-
-    PROD* arr_prod = (PROD*)malloc(MAX_PRODUCT * sizeof(PROD));
-
-
-
+    PROD* arr_prod = (PROD*)malloc(sizeof(PROD));
 
 
 
     while (1) {
-
-
+        int buf = 0;    // 입력버퍼로 사용할 변수
         int input = 0;
         printf("\n\n");
         sys_printline();
         printf("[선도관리 시스템 냉장고]\n");
-        printf("간단입력[0] 상세입력[1] 상품목록확인[2] 상품삭제[3] 유통기한검사[4] >> ");
+        printf("간단입력[0] 상세입력[1] 상품목록확인[2] 상품삭제[3] 유통기한검사[4] 종료[5] >> ");
         scanf("%d", &input);
 
         // 간단입력시
@@ -97,10 +92,13 @@ int main(void) {
             sys_checkexp(time(NULL), arr_prod, count);
         }
 
+        // 종료
         else if (input == 5) {
-
+            break;
         }
 
+
+        // 잘못 입력했을 시
         else {
             printf("\n\n(error)다시 입력하세요\n\n");
         }
@@ -117,5 +115,6 @@ int main(void) {
     }
     free(arr_prod);
 
+    return 0;
 
 }

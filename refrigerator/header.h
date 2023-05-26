@@ -5,7 +5,7 @@
 #include <time.h>
 
 #define MAX_PRODUCT 128	//냉장고 최대 용량
-#define MAX_CATEGORY 10
+#define MAX_CATEGORY 10 //카테고리 최대 용량
 #define BUF 128
 
 // 상품 구조체
@@ -29,4 +29,3 @@ typedef struct category {
 	char* name;
 	S_CATE* arr_small_category;
 }CATE;
-
