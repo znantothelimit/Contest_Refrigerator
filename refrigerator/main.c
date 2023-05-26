@@ -1,4 +1,4 @@
-#include "header.h"
+ï»¿#include "header.h"
 
 
 
@@ -49,73 +49,73 @@ int main(void) {
     PROD* arr_prod = (PROD*)malloc(MAX_PRODUCT * sizeof(PROD));
 
 
-    
 
-    
 
-	while (1) {
+
+
+    while (1) {
 
 
         int input = 0;
         printf("\n\n");
         sys_printline();
-        printf("[¼±µµ°ü¸® ½Ã½ºÅÛ ³ÃÀå°í]\n");
-        printf("°£´ÜÀÔ·Â[0] »ó¼¼ÀÔ·Â[1] »óÇ°¸ñ·ÏÈ®ÀÎ[2] »óÇ°»èÁ¦[3] À¯Åë±âÇÑ°Ë»ç[4] >> ");
+        printf("[ì„ ë„ê´€ë¦¬ ì‹œìŠ¤í…œ ëƒ‰ìž¥ê³ ]\n");
+        printf("ê°„ë‹¨ìž…ë ¥[0] ìƒì„¸ìž…ë ¥[1] ìƒí’ˆëª©ë¡í™•ì¸[2] ìƒí’ˆì‚­ì œ[3] ìœ í†µê¸°í•œê²€ì‚¬[4] >> ");
         scanf("%d", &input);
 
-        // °£´ÜÀÔ·Â½Ã
+        // ê°„ë‹¨ìž…ë ¥ì‹œ
         if (input == 0) {
             sys_store_0(arr_prod, count, array_category);
             count++;
         }
 
-        // »ó¼¼ÀÔ·Â½Ã
+        // ìƒì„¸ìž…ë ¥ì‹œ
         else if (input == 1) {
             sys_store_1(arr_prod, count, array_category);
             count++;
         }
 
-        // »óÇ°¸ñ·ÏÈ®ÀÎ
+        // ìƒí’ˆëª©ë¡í™•ì¸
         else if (input == 2) {
             sys_print_category_all(arr_prod, count, array_category);
         }
 
-        // »èÁ¦ ¸ðµå
+        // ì‚­ì œ ëª¨ë“œ
         else if (input == 3) {
-            if (count == 0) printf("»èÁ¦ÇÒ Ç×¸ñÀÌ ¾ø½À´Ï´Ù!\n");
+            if (count == 0) printf("ì‚­ì œí•  í•­ëª©ì´ ì—†ìŠµë‹ˆë‹¤!\n");
             else {
                 sys_printline();
                 sys_print_category_all(arr_prod, count, array_category);
-                printf("»èÁ¦ÇÒ Ç×¸ñÀÇ index ÀÔ·Â >> ");
+                printf("ì‚­ì œí•  í•­ëª©ì˜ index ìž…ë ¥ >> ");
                 scanf("%d", &buf);
                 sys_del(arr_prod, count, buf);
             }
         }
-        
-        // À¯Åë±âÇÑ °Ë»ç
+
+        // ìœ í†µê¸°í•œ ê²€ì‚¬
         else if (input == 4) {
             sys_checkexp(time(NULL), arr_prod, count);
         }
 
         else if (input == 5) {
-            
+
         }
 
         else {
-            printf("\n\n(error)´Ù½Ã ÀÔ·ÂÇÏ¼¼¿ä\n\n");
+            printf("\n\n(error)ë‹¤ì‹œ ìž…ë ¥í•˜ì„¸ìš”\n\n");
         }
 
 
-	}
+    }
 
 
-    
+
     for (int i = 0; i < count; i++) {
         free(arr_prod[i].category);
         free(arr_prod[i].small_category);
         free(arr_prod[i].name);
     }
     free(arr_prod);
-    
+
 
 }

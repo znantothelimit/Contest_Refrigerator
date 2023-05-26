@@ -9,7 +9,7 @@
 #define BUF 128
 
 // 상품 구조체
-typedef struct prod{
+typedef struct prod {
 	char* category;
 	char* small_category;
 	char* name;

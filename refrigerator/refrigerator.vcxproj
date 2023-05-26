@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\통경대\iotproj\main.c" />
-    <ClCompile Include="..\..\..\..\통경대\iotproj\sys.c" />
+    <ClInclude Include="header.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\통경대\iotproj\header.h" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="sys.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
