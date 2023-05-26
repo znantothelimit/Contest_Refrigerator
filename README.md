@@ -11,7 +11,7 @@
 </br>
 ![image](https://github.com/znantothelimit/Contest_Refrigerator/assets/56341387/b7fc8a7d-15ed-4719-ab95-87ae644270c3)</br>
 <식품 데이터 예></br>
-</br></br></br>
+</br></br>
 ![냉장고 식품데이터 저장방식](https://github.com/znantothelimit/Contest_Refrigerator/assets/56341387/a5eacccf-5c98-4b75-9bf4-75a99ef8f5df)</br>
 <냉장고 식품데이터 저장 방식></br>
 </br></br>
